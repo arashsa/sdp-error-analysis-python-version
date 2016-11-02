@@ -1,0 +1,34 @@
+1. Team id
+	UTurku
+
+2. Team affiliation
+	University of Turku
+	
+3. Contact information
+	Filip Ginter figint@utu.fi, contact person
+	Jenna Kanerva jmnybl@utu.fi
+	Juhani Luotolahti mjluot@utu.fi
+
+4. Submission, i.e., ZIP file name
+	UTurku.tgz
+    open.dm.1.sdp
+    open.pas.1.sdp
+    open.pcedt.1.sdp
+    open.dm.2.sdp
+    open.pas.2.sdp
+    open.pcedt.2.sdp
+    README
+
+5. System specs
+
+Our system is a three staged system of supervised classifiers. The first stage is for identifying the argument-predicate pairs in the sentence and the second stage for assigning them semantic roles, as well as pruning unnecessary pairs. Finally, the third stage predicts top nodes.
+The main features used in prediction predominantly come from the dependency trees, POS tags and the surrounding sentence, but also features derived from additional data are used.
+We use Liblinear for binary classification of argument-predicate pairs, SVM multiclass for multiclass classification of argument roles and Leveldb for fast access into preprocessed feature values.
+We don't perform any significant pre- or post-processing for the data. As an additional data for this task we use Google syntactic ngrams dataset and pretrained Google News vector space model. 
+
+6 References (if applicable)
+	Liblinear: http://www.csie.ntu.edu.tw/~cjlin/liblinear/
+	SVM multiclass: http://www.cs.cornell.edu/people/tj/svm_light/svm_multiclass.html
+	Leveldb: https://code.google.com/p/leveldb/
+	Google syntactic ngrams dataset: http://commondatastorage.googleapis.com/books/syntactic-ngrams/index.html
+	Google News vector space model: https://code.google.com/p/word2vec/

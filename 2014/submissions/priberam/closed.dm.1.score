@@ -1,0 +1,145 @@
+# Evaluation
+
+Gold standard file: ../test/dm.sdp
+System output file: priberam/closed.dm.1.sdp
+
+## Scores including virtual dependencies to top nodes
+
+Number of edges in gold standard: 23203
+Number of edges in system output: 22818
+Number of edges in common, labeled: 20268
+Number of edges in common, unlabeled: 20569
+
+### Labeled scores
+
+LP: 0.888246
+LR: 0.873508
+LF: 0.880815
+LM: 0.224036
+
+### Breakdown by label type
+
+Label type,Number of edges in gold standard,Number of edges in system output,Precision,Recall
+-VIRTUAL-,1346,1341,0.890380,0.887073
+ARG1,8812,8846,0.853832,0.857127
+ARG2,5374,5413,0.875485,0.881838
+ARG3,296,184,0.804348,0.500000
+ARG4,6,1,1.000000,0.166667
+BV,2412,2429,0.976534,0.983416
+_and+not_c,1,0,NaN,0.000000
+_and+then_c,3,1,1.000000,0.333333
+_and_c,476,423,0.813239,0.722689
+_as+well+as_c,4,1,1.000000,0.250000
+_but+not_c,1,0,NaN,0.000000
+_but_c,54,26,0.653846,0.314815
+_minus_c,1,0,NaN,0.000000
+_not_c,2,1,1.000000,0.500000
+_or_c,85,80,0.912500,0.858824
+_plus_c,2,0,NaN,0.000000
+_rather+than_c,1,0,NaN,0.000000
+_then_c,8,0,NaN,0.000000
+_though_c,1,0,NaN,0.000000
+_versus_c,1,0,NaN,0.000000
+appos,206,167,0.892216,0.723301
+compound,2514,2484,0.947262,0.935959
+conj,115,53,0.811321,0.373913
+discourse,3,0,NaN,0.000000
+loc,321,267,0.827715,0.688474
+measure,13,13,0.692308,0.692308
+mwe,189,178,0.971910,0.915344
+neg,124,124,1.000000,1.000000
+of,32,31,1.000000,0.968750
+parenthetical,4,2,1.000000,0.500000
+plus,4,4,1.000000,1.000000
+poss,533,539,0.964750,0.975610
+subord,82,39,0.717949,0.341463
+temp,10,3,0.000000,0.000000
+times,163,164,0.993902,1.000000
+unspec_manner,4,4,1.000000,1.000000
+
+### Breakdown by edge length
+
+Edge length,Number of edges in gold standard,Number of edges in system output,Precision,Recall
+1,10236,10546,0.918358,0.946170
+2,5221,5252,0.911843,0.917257
+3,2764,2782,0.863408,0.869030
+4,1359,1284,0.830218,0.784400
+5-9,2292,1939,0.794740,0.672339
+10-,1331,1015,0.773399,0.589782
+
+### Unlabeled scores
+
+UP: 0.901437
+UR: 0.886480
+UF: 0.893896
+UM: 0.247774
+
+## Scores excluding virtual dependencies to top nodes
+
+Number of edges in gold standard: 21857
+Number of edges in system output: 21477
+Number of edges in common, labeled: 19074
+Number of edges in common, unlabeled: 19375
+
+### Labeled scores
+
+LP: 0.888113
+LR: 0.872672
+LF: 0.880325
+LM: 0.229970
+
+### Breakdown by label type
+
+Label type,Number of edges in gold standard,Number of edges in system output,Precision,Recall
+ARG1,8812,8846,0.853832,0.857127
+ARG2,5374,5413,0.875485,0.881838
+ARG3,296,184,0.804348,0.500000
+ARG4,6,1,1.000000,0.166667
+BV,2412,2429,0.976534,0.983416
+_and+not_c,1,0,NaN,0.000000
+_and+then_c,3,1,1.000000,0.333333
+_and_c,476,423,0.813239,0.722689
+_as+well+as_c,4,1,1.000000,0.250000
+_but+not_c,1,0,NaN,0.000000
+_but_c,54,26,0.653846,0.314815
+_minus_c,1,0,NaN,0.000000
+_not_c,2,1,1.000000,0.500000
+_or_c,85,80,0.912500,0.858824
+_plus_c,2,0,NaN,0.000000
+_rather+than_c,1,0,NaN,0.000000
+_then_c,8,0,NaN,0.000000
+_though_c,1,0,NaN,0.000000
+_versus_c,1,0,NaN,0.000000
+appos,206,167,0.892216,0.723301
+compound,2514,2484,0.947262,0.935959
+conj,115,53,0.811321,0.373913
+discourse,3,0,NaN,0.000000
+loc,321,267,0.827715,0.688474
+measure,13,13,0.692308,0.692308
+mwe,189,178,0.971910,0.915344
+neg,124,124,1.000000,1.000000
+of,32,31,1.000000,0.968750
+parenthetical,4,2,1.000000,0.500000
+plus,4,4,1.000000,1.000000
+poss,533,539,0.964750,0.975610
+subord,82,39,0.717949,0.341463
+temp,10,3,0.000000,0.000000
+times,163,164,0.993902,1.000000
+unspec_manner,4,4,1.000000,1.000000
+
+### Breakdown by edge length
+
+Edge length,Number of edges in gold standard,Number of edges in system output,Precision,Recall
+1,10044,10353,0.918285,0.946535
+2,5063,5093,0.911251,0.916650
+3,2586,2599,0.861100,0.865429
+4,1240,1162,0.823580,0.771774
+5-9,1988,1632,0.781250,0.641348
+10-,936,638,0.714734,0.487179
+
+### Unlabeled scores
+
+UP: 0.902128
+UR: 0.886444
+UF: 0.894217
+UM: 0.255193

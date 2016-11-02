@@ -1,0 +1,113 @@
+Representation type: PSD
+# Evaluation
+
+Gold standard file: ../test/cs.ood.psd.sdp
+System output file: Turku/cs.ood.open.psd.1.sdp
+
+## Scores including virtual dependencies to top nodes
+
+### Labeled scores
+
+Number of edges in gold standard: 68940
+Number of edges in system output: 66016
+Number of edges in common: 42984
+
+LP: 0.651115
+LR: 0.623499
+LF: 0.637008
+LM: 0.073287
+
+### Unlabeled scores
+
+Number of unlabeled edges in gold standard: 68940
+Number of unlabeled edges in system output: 66016
+Number of unlabeled edges in common: 56074
+
+UP: 0.849400
+UR: 0.813374
+UF: 0.830997
+UM: 0.201684
+
+### Complete predications
+
+Number of complete predications in gold standard: 8950
+Number of complete predications in system output: 9514
+Number of complete predications in common: 4712
+
+PP: 0.495270
+PR: 0.526480
+PF: 0.510399
+
+### Semantic frames
+
+Number of semantic frames in gold standard: 8950
+Number of semantic frames in system output: 9514
+Number of semantic frames in common: 4712
+
+FP: 0.495270
+FR: 0.526480
+FF: 0.510399
+
+### Senses
+
+Number of senses in gold standard: 8950
+Number of senses in system output: 9514
+Number of senses in common: 8893
+
+SP: 0.934728
+SR: 0.993631
+SF: 0.963280
+
+## Scores excluding virtual dependencies to top nodes
+
+### Labeled scores
+
+Number of edges in gold standard: 62266
+Number of edges in system output: 58402
+Number of edges in common: 37262
+
+LP: 0.638026
+LR: 0.598433
+LF: 0.617595
+LM: 0.074818
+
+### Unlabeled scores
+
+Number of unlabeled edges in gold standard: 62266
+Number of unlabeled edges in system output: 58402
+Number of unlabeled edges in common: 50352
+
+UP: 0.862162
+UR: 0.808660
+UF: 0.834554
+UM: 0.205894
+
+### Complete predications
+
+Number of complete predications in gold standard: 8950
+Number of complete predications in system output: 9514
+Number of complete predications in common: 4712
+
+PP: 0.495270
+PR: 0.526480
+PF: 0.510399
+
+### Semantic frames
+
+Number of semantic frames in gold standard: 8950
+Number of semantic frames in system output: 9514
+Number of semantic frames in common: 4712
+
+FP: 0.495270
+FR: 0.526480
+FF: 0.510399
+
+### Senses
+
+Number of senses in gold standard: 8950
+Number of senses in system output: 9514
+Number of senses in common: 8893
+
+SP: 0.934728
+SR: 0.993631
+SF: 0.963280

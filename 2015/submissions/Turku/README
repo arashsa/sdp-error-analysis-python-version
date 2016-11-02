@@ -1,0 +1,114 @@
+Team identifier: Turku
+
+Team member name(s) and affiliation(s): 
+
+Jenna Kanerva, Juhani Luotolahti, Filip Ginter
+Department of IT, University of Turku, Finland
+
+Designated contact person and email address: 
+
+"Jenna Kanerva" <jmnybl@utu.fi>
+
+Inventory of results files included in the archive:
+
+Executive summary:
+1) cs,en,cz in the open track 
+2) en in the gold track
+3) en has sense predictions (predicate disambiguation) 
+
+cs.id.open.psd.1.sdp
+cs.id.open.psd.2.sdp
+cs.ood.open.psd.1.sdp
+cs.ood.open.psd.2.sdp
+cz.id.open.pas.1.sdp
+cz.id.open.pas.2.sdp
+en.id.gold.dm.1.sdp
+en.id.gold.dm.2.sdp
+en.id.gold.pas.1.sdp
+en.id.gold.pas.2.sdp
+en.id.gold.psd.1.sdp
+en.id.gold.psd.2.sdp
+en.id.open.dm.1.sdp
+en.id.open.dm.2.sdp
+en.id.open.pas.1.sdp
+en.id.open.pas.2.sdp
+en.id.open.psd.1.sdp
+en.id.open.psd.2.sdp
+en.ood.gold.dm.1.sdp
+en.ood.gold.dm.2.sdp
+en.ood.gold.pas.1.sdp
+en.ood.gold.pas.2.sdp
+en.ood.gold.psd.1.sdp
+en.ood.gold.psd.2.sdp
+en.ood.open.dm.1.sdp
+en.ood.open.dm.2.sdp
+en.ood.open.pas.1.sdp
+en.ood.open.pas.2.sdp
+en.ood.open.psd.1.sdp
+en.ood.open.psd.2.sdp
+
+
+System characteristics, including (if applicable):
+
+The overall approach is to use the beam-searched, transition-based
+dependency parser developed in Turku, roughly matching the pipeline
+model of Bohnet et al. (2013). But it is not used in the way parsers
+have been used in the 2014 shared task, i.e. we do not transform the
+semantic graphs into trees. Instead, every predicate is considered as
+a root and its arguments as its dependents (so the tree has depth one
+with all tokens attached to the predicate under inspection - using a
+dummy dependency type for tokens that are not arguments). The parser
+learns to predict these trees, of which we then simply take the union
+to produce the final graph of the sentence. The reason to use the
+parser is to get with no effort the entire machine learning machinery
+already present in the parser, especially the beam search and
+generalized perceptron which allow us to make non-local decisions.
+
+The features contain more or less the union of the features of our
+last year's system and the features which the dependency parser
+natively uses. The most important source of features are syntactic
+parse trees, especially with respect to the syntactic path between the
+predicate and the candidate argument. For English, we use the trees
+provided in the shared task, while for Chinese and Czech we parse the
+data with available tools.
+
+The gold track is the same system as in the open track, but trained
+using the gold syntactic trees and tested using the gold syntactic
+trees. No other changes have been made.
+
+On the development data, the current systems performs substantially
+better than our last year's system on DM and PAS, and about equal on
+PSD.
+
+The two runs reflect two manners to re-order the queue in the
+transition based parser. We expect 1 to be a bit better than 2.
+
+Tools: Turku Dependency Parser is the core of the system, duduplus
+parser was used for Chinese and MaltParser for Czech.
+
+Data pre- or post-processing:
+
+We syntactically parsed the Chinese and Czech data. 
+
+Additional data used: The senses in the English data have been
+disambiguated using English word2vec models and the method in Kanerva
+and Ginter (2014).
+
+Bibliographic references:
+
+@inproceedings{kanerva2014post,
+  author = {Kanerva, Jenna and Ginter, Filip},
+  title = {Post-hoc Manipulations of Vector Space Models with Application to Semantic Role Labeling},
+  booktitle = {Proceedings of the 2nd Workshop on Continuous Vector Space Models and their Compositionality (CVSC) at EACL'14},
+  year = {2014},
+  pages = {1--10}
+}
+
+@article{bohnet2013joint,
+  author = {Bernd Bohnet and Joakim Nivre and Igor Boguslavsky and Richárd Farkas and Filip Ginter and Jan Hajič},
+  title = {Joint Morphological and Syntactic Analysis for Richly Inflected Languages},
+  journal = {Transactions of the Association for Computational Linguistics},
+  year = {2013},
+  volume = {1},
+  pages = {415--428}
+}

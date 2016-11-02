@@ -1,0 +1,151 @@
+# Evaluation
+
+Gold standard file: ../test/dm.sdp
+System output file: copenhagen/closed.dm.2.sdp
+
+## Scores including virtual dependencies to top nodes
+
+Number of edges in gold standard: 23203
+Number of edges in system output: 22999
+Number of edges in common, labeled: 19499
+Number of edges in common, unlabeled: 19955
+
+### Labeled scores
+
+LP: 0.847819
+LR: 0.840365
+LF: 0.844076
+LM: 0.203264
+
+### Breakdown by label type
+
+Label type,Number of edges in gold standard,Number of edges in system output,Precision,Recall
+-VIRTUAL-,1346,1348,0.743323,0.744428
+ARG1,8812,8651,0.829846,0.814685
+ARG2,5374,5497,0.840822,0.860067
+ARG3,296,232,0.607759,0.476351
+ARG4,6,3,0.333333,0.166667
+BV,2412,2428,0.975288,0.981758
+_and+not_c,1,0,NaN,0.000000
+_and+then_c,3,1,0.000000,0.000000
+_and+thus_c,0,1,0.000000,NaN
+_and_c,476,477,0.687631,0.689076
+_as+well+as_c,4,2,0.500000,0.250000
+_but+also_c,0,3,0.000000,NaN
+_but+not_c,1,1,0.000000,0.000000
+_but_c,54,47,0.234043,0.203704
+_minus_c,1,0,NaN,0.000000
+_nor_c,0,1,0.000000,NaN
+_not_c,2,2,0.500000,0.500000
+_or_c,85,67,0.865672,0.682353
+_plus_c,2,0,NaN,0.000000
+_rather+than_c,1,0,NaN,0.000000
+_then_c,8,1,0.000000,0.000000
+_though_c,1,0,NaN,0.000000
+_versus_c,1,0,NaN,0.000000
+appos,206,201,0.820896,0.800971
+compound,2514,2483,0.931937,0.920446
+conj,115,104,0.461538,0.417391
+discourse,3,2,0.000000,0.000000
+loc,321,303,0.742574,0.700935
+measure,13,10,0.900000,0.692308
+mwe,189,183,0.803279,0.777778
+neg,124,124,1.000000,1.000000
+of,32,30,1.000000,0.937500
+parenthetical,4,4,0.500000,0.500000
+plus,4,4,1.000000,1.000000
+poss,533,539,0.953618,0.964353
+subord,82,81,0.469136,0.463415
+temp,10,3,0.333333,0.100000
+times,163,162,1.000000,0.993865
+unspec_manner,4,4,1.000000,1.000000
+
+### Breakdown by edge length
+
+Edge length,Number of edges in gold standard,Number of edges in system output,Precision,Recall
+1,10236,10399,0.908164,0.922626
+2,5221,5233,0.888209,0.890251
+3,2764,2727,0.832783,0.821635
+4,1359,1303,0.775134,0.743194
+5-9,2292,2166,0.654663,0.618674
+10-,1331,1171,0.604611,0.531931
+
+### Unlabeled scores
+
+UP: 0.867646
+UR: 0.860018
+UF: 0.863815
+UM: 0.236647
+
+## Scores excluding virtual dependencies to top nodes
+
+Number of edges in gold standard: 21857
+Number of edges in system output: 21651
+Number of edges in common, labeled: 18497
+Number of edges in common, unlabeled: 18953
+
+### Labeled scores
+
+LP: 0.854325
+LR: 0.846274
+LF: 0.850280
+LM: 0.224777
+
+### Breakdown by label type
+
+Label type,Number of edges in gold standard,Number of edges in system output,Precision,Recall
+ARG1,8812,8651,0.829846,0.814685
+ARG2,5374,5497,0.840822,0.860067
+ARG3,296,232,0.607759,0.476351
+ARG4,6,3,0.333333,0.166667
+BV,2412,2428,0.975288,0.981758
+_and+not_c,1,0,NaN,0.000000
+_and+then_c,3,1,0.000000,0.000000
+_and+thus_c,0,1,0.000000,NaN
+_and_c,476,477,0.687631,0.689076
+_as+well+as_c,4,2,0.500000,0.250000
+_but+also_c,0,3,0.000000,NaN
+_but+not_c,1,1,0.000000,0.000000
+_but_c,54,47,0.234043,0.203704
+_minus_c,1,0,NaN,0.000000
+_nor_c,0,1,0.000000,NaN
+_not_c,2,2,0.500000,0.500000
+_or_c,85,67,0.865672,0.682353
+_plus_c,2,0,NaN,0.000000
+_rather+than_c,1,0,NaN,0.000000
+_then_c,8,1,0.000000,0.000000
+_though_c,1,0,NaN,0.000000
+_versus_c,1,0,NaN,0.000000
+appos,206,201,0.820896,0.800971
+compound,2514,2483,0.931937,0.920446
+conj,115,104,0.461538,0.417391
+discourse,3,2,0.000000,0.000000
+loc,321,303,0.742574,0.700935
+measure,13,10,0.900000,0.692308
+mwe,189,183,0.803279,0.777778
+neg,124,124,1.000000,1.000000
+of,32,30,1.000000,0.937500
+parenthetical,4,4,0.500000,0.500000
+plus,4,4,1.000000,1.000000
+poss,533,539,0.953618,0.964353
+subord,82,81,0.469136,0.463415
+temp,10,3,0.333333,0.100000
+times,163,162,1.000000,0.993865
+unspec_manner,4,4,1.000000,1.000000
+
+### Breakdown by edge length
+
+Edge length,Number of edges in gold standard,Number of edges in system output,Precision,Recall
+1,10044,10195,0.910152,0.923835
+2,5063,5052,0.894893,0.892949
+3,2586,2553,0.834704,0.824053
+4,1240,1179,0.777778,0.739516
+5-9,1988,1859,0.643357,0.601610
+10-,936,813,0.557196,0.483974
+
+### Unlabeled scores
+
+UP: 0.875387
+UR: 0.867136
+UF: 0.871242
+UM: 0.264095

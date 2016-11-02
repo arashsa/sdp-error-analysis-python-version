@@ -1,0 +1,54 @@
+1. Team identifier
+
+CMU_ARK
+
+2. Team member name(s) and affiliation(s);
+
+David Bamman
+Jesse Dodge
+Manaal Faruqui
+Jeff Flanigan
+Brendan O'Connor
+Nathan Schneider
+Noah Smith
+Swabha Swayamdipta
+Sam Thomson
+
+Carnegie Mellon University
+
+3. Designated contact person and email address:
+
+David Bamman 
+dbamman@cs.cmu.edu
+
+4. Inventory of results files included in the archive:
+
+open.dm.1.sdp
+open.pas.1.sdp
+open.pcedt.1.sdp
+
+5. System characteristics, including (if applicable):
+
+a. core approach:
+
+DM, PCEDT: L2-regularized multiclass logistic regression predicting the existence of a labeled edge between pairs of tokens within a 10-word window of each other, trained using stochastic gradient descent with Adagrad for the learning rate, and feature hashing for all features. Separate binary logistic regression predicting whether each token is a "top".
+
+PAS: Parser with determinism constraints on the edges: for each node and each edge label, there can exists at most one outgoing edge of that label. Parser trained using the structured SVM with stochastic subgradient descent. Separate binary logistic regression predicting whether each token is a "top".
+
+b. important features:
+
+Node features: Part of speech, lemma.
+
+Edge features: Part of speech, lemma of child and parent; linear distance between child and parent; distance threshold indicator between child and parent; dependency tree distance, dependency ancestor/descendent; part of speech/lemma of adjacent tokens; labeled and unlabeled dependency path; subcategorization sequence, de-duplicated POS tag sequence between child and parent.
+
+c. critical tools used:
+
+External tools: morpha lemmatizer. Used organizer-supplied companion syntactic parses.
+
+d. data pre- or post-processing:
+
+Lemmatization; singleton predictor to classify whether should be in the resulting semantic graph.
+
+e. additional data used:
+
+None

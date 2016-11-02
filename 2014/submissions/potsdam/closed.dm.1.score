@@ -1,0 +1,149 @@
+# Evaluation
+
+Gold standard file: ../test/dm.sdp
+System output file: potsdam/closed.dm.1.sdp
+
+## Scores including virtual dependencies to top nodes
+
+Number of edges in gold standard: 23203
+Number of edges in system output: 20279
+Number of edges in common, labeled: 16910
+Number of edges in common, unlabeled: 17332
+
+### Labeled scores
+
+LP: 0.833868
+LR: 0.728785
+LF: 0.777793
+LM: 0.042285
+
+### Breakdown by label type
+
+Label type,Number of edges in gold standard,Number of edges in system output,Precision,Recall
+-VIRTUAL-,1346,1186,0.755481,0.665676
+ARG1,8812,7679,0.806095,0.702451
+ARG2,5374,4208,0.817253,0.639933
+ARG3,296,202,0.579208,0.395270
+ARG4,6,1,0.000000,0.000000
+BV,2412,2431,0.969560,0.977197
+_and+not_c,1,1,0.000000,0.000000
+_and+then_c,3,0,NaN,0.000000
+_and_c,476,462,0.662338,0.642857
+_as+well+as_c,4,0,NaN,0.000000
+_but+also_c,0,1,0.000000,NaN
+_but+not_c,1,0,NaN,0.000000
+_but_c,54,35,0.257143,0.166667
+_minus_c,1,0,NaN,0.000000
+_not_c,2,0,NaN,0.000000
+_or_c,85,68,0.838235,0.670588
+_plus_c,2,0,NaN,0.000000
+_rather+than_c,1,2,0.000000,0.000000
+_then_c,8,1,0.000000,0.000000
+_though_c,1,0,NaN,0.000000
+_versus_c,1,0,NaN,0.000000
+_yet_c,0,1,0.000000,NaN
+appos,206,139,0.863309,0.582524
+compound,2514,2414,0.919635,0.883055
+conj,115,95,0.484211,0.400000
+discourse,3,2,0.000000,0.000000
+loc,321,254,0.665354,0.526480
+measure,13,11,0.818182,0.692308
+mwe,189,178,0.786517,0.740741
+neg,124,125,0.992000,1.000000
+of,32,32,0.968750,0.968750
+parenthetical,4,1,0.000000,0.000000
+plus,4,4,1.000000,1.000000
+poss,533,503,0.942346,0.889306
+subord,82,72,0.513889,0.451220
+temp,10,6,0.333333,0.200000
+times,163,162,0.987654,0.981595
+unspec_manner,4,3,1.000000,0.750000
+
+### Breakdown by edge length
+
+Edge length,Number of edges in gold standard,Number of edges in system output,Precision,Recall
+1,10236,10245,0.897706,0.898496
+2,5221,4553,0.869317,0.758092
+3,2764,2133,0.799812,0.617221
+4,1359,891,0.726150,0.476085
+5-9,2292,1493,0.585399,0.381326
+10-,1331,964,0.547718,0.396694
+
+### Unlabeled scores
+
+UP: 0.854677
+UR: 0.746972
+UF: 0.797203
+UM: 0.046736
+
+## Scores excluding virtual dependencies to top nodes
+
+Number of edges in gold standard: 21857
+Number of edges in system output: 19093
+Number of edges in common, labeled: 16014
+Number of edges in common, unlabeled: 16436
+
+### Labeled scores
+
+LP: 0.838737
+LR: 0.732671
+LF: 0.782125
+LM: 0.069733
+
+### Breakdown by label type
+
+Label type,Number of edges in gold standard,Number of edges in system output,Precision,Recall
+ARG1,8812,7679,0.806095,0.702451
+ARG2,5374,4208,0.817253,0.639933
+ARG3,296,202,0.579208,0.395270
+ARG4,6,1,0.000000,0.000000
+BV,2412,2431,0.969560,0.977197
+_and+not_c,1,1,0.000000,0.000000
+_and+then_c,3,0,NaN,0.000000
+_and_c,476,462,0.662338,0.642857
+_as+well+as_c,4,0,NaN,0.000000
+_but+also_c,0,1,0.000000,NaN
+_but+not_c,1,0,NaN,0.000000
+_but_c,54,35,0.257143,0.166667
+_minus_c,1,0,NaN,0.000000
+_not_c,2,0,NaN,0.000000
+_or_c,85,68,0.838235,0.670588
+_plus_c,2,0,NaN,0.000000
+_rather+than_c,1,2,0.000000,0.000000
+_then_c,8,1,0.000000,0.000000
+_though_c,1,0,NaN,0.000000
+_versus_c,1,0,NaN,0.000000
+_yet_c,0,1,0.000000,NaN
+appos,206,139,0.863309,0.582524
+compound,2514,2414,0.919635,0.883055
+conj,115,95,0.484211,0.400000
+discourse,3,2,0.000000,0.000000
+loc,321,254,0.665354,0.526480
+measure,13,11,0.818182,0.692308
+mwe,189,178,0.786517,0.740741
+neg,124,125,0.992000,1.000000
+of,32,32,0.968750,0.968750
+parenthetical,4,1,0.000000,0.000000
+plus,4,4,1.000000,1.000000
+poss,533,503,0.942346,0.889306
+subord,82,72,0.513889,0.451220
+temp,10,6,0.333333,0.200000
+times,163,162,0.987654,0.981595
+unspec_manner,4,3,1.000000,0.750000
+
+### Breakdown by edge length
+
+Edge length,Number of edges in gold standard,Number of edges in system output,Precision,Recall
+1,10044,10062,0.896740,0.898347
+2,5063,4391,0.869050,0.753703
+3,2586,1992,0.795683,0.612916
+4,1240,817,0.728274,0.479839
+5-9,1988,1283,0.570538,0.368209
+10-,936,548,0.479927,0.280983
+
+### Unlabeled scores
+
+UP: 0.860839
+UR: 0.751979
+UF: 0.802735
+UM: 0.080861

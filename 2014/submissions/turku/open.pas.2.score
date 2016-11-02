@@ -1,0 +1,157 @@
+# Evaluation
+
+Gold standard file: ../test/pas.sdp
+System output file: turku/open.pas.2.sdp
+
+## Scores including virtual dependencies to top nodes
+
+Number of edges in gold standard: 30446
+Number of edges in system output: 30593
+Number of edges in common, labeled: 26718
+Number of edges in common, unlabeled: 27153
+
+### Labeled scores
+
+LP: 0.873337
+LR: 0.877554
+LF: 0.875440
+LM: 0.172107
+
+### Breakdown by label type
+
+Label type,Number of edges in gold standard,Number of edges in system output,Precision,Recall
+-VIRTUAL-,1348,1348,0.921365,0.921365
+adj_ARG1,3944,3956,0.887260,0.889959
+adj_ARG2,67,61,0.803279,0.731343
+adj_MOD,5,0,NaN,0.000000
+app_ARG1,230,240,0.787500,0.821739
+app_ARG2,230,217,0.815668,0.769565
+aux_ARG1,931,921,0.916395,0.906552
+aux_ARG2,932,952,0.941176,0.961373
+aux_MOD,3,0,NaN,0.000000
+comp_ARG1,583,588,0.928571,0.936535
+comp_ARG2,6,4,0.750000,0.500000
+comp_MOD,118,85,0.788235,0.567797
+conj_ARG1,384,288,0.753472,0.565104
+conj_ARG2,240,254,0.783465,0.829167
+conj_ARG3,3,0,NaN,0.000000
+coord_ARG1,721,727,0.749656,0.755895
+coord_ARG2,721,668,0.854790,0.791956
+det_ARG1,2773,2786,0.969849,0.974396
+dtv_ARG2,9,0,NaN,0.000000
+it_ARG1,16,14,0.714286,0.625000
+lgs_ARG2,54,56,0.785714,0.814815
+lparen_ARG1,28,20,0.550000,0.392857
+lparen_ARG2,28,22,0.636364,0.500000
+lparen_ARG3,28,18,0.888889,0.571429
+noun_ARG1,2848,2854,0.941135,0.943118
+noun_ARG2,33,25,0.680000,0.515152
+poss_ARG1,251,257,0.945525,0.968127
+poss_ARG2,265,265,0.988679,0.988679
+prep_ARG1,2679,2892,0.780083,0.842105
+prep_ARG2,2716,2844,0.899789,0.942194
+prep_ARG3,11,0,NaN,0.000000
+punct_ARG1,1856,1939,0.742135,0.775323
+quote_ARG1,1,0,NaN,0.000000
+quote_ARG2,4,3,0.000000,0.000000
+quote_ARG3,4,1,0.000000,0.000000
+relative_ARG1,190,180,0.838889,0.794737
+relative_ARG2,7,7,0.714286,0.714286
+verb_ARG1,2959,2938,0.872703,0.866509
+verb_ARG2,2946,3000,0.853333,0.868975
+verb_ARG3,215,131,0.786260,0.479070
+verb_ARG4,3,0,NaN,0.000000
+verb_MOD,56,32,0.656250,0.375000
+
+### Breakdown by edge length
+
+Edge length,Number of edges in gold standard,Number of edges in system output,Precision,Recall
+1,14120,14544,0.922717,0.950425
+2,6437,6587,0.896007,0.916887
+3,3351,3370,0.856677,0.861534
+4,1728,1664,0.791466,0.762153
+5-9,2948,2682,0.725951,0.660448
+10-,1862,1746,0.713058,0.668636
+
+### Unlabeled scores
+
+UP: 0.887556
+UR: 0.891841
+UF: 0.889693
+UM: 0.180267
+
+## Scores excluding virtual dependencies to top nodes
+
+Number of edges in gold standard: 29098
+Number of edges in system output: 29245
+Number of edges in common, labeled: 25476
+Number of edges in common, unlabeled: 25911
+
+### Labeled scores
+
+LP: 0.871123
+LR: 0.875524
+LF: 0.873318
+LM: 0.172849
+
+### Breakdown by label type
+
+Label type,Number of edges in gold standard,Number of edges in system output,Precision,Recall
+adj_ARG1,3944,3956,0.887260,0.889959
+adj_ARG2,67,61,0.803279,0.731343
+adj_MOD,5,0,NaN,0.000000
+app_ARG1,230,240,0.787500,0.821739
+app_ARG2,230,217,0.815668,0.769565
+aux_ARG1,931,921,0.916395,0.906552
+aux_ARG2,932,952,0.941176,0.961373
+aux_MOD,3,0,NaN,0.000000
+comp_ARG1,583,588,0.928571,0.936535
+comp_ARG2,6,4,0.750000,0.500000
+comp_MOD,118,85,0.788235,0.567797
+conj_ARG1,384,288,0.753472,0.565104
+conj_ARG2,240,254,0.783465,0.829167
+conj_ARG3,3,0,NaN,0.000000
+coord_ARG1,721,727,0.749656,0.755895
+coord_ARG2,721,668,0.854790,0.791956
+det_ARG1,2773,2786,0.969849,0.974396
+dtv_ARG2,9,0,NaN,0.000000
+it_ARG1,16,14,0.714286,0.625000
+lgs_ARG2,54,56,0.785714,0.814815
+lparen_ARG1,28,20,0.550000,0.392857
+lparen_ARG2,28,22,0.636364,0.500000
+lparen_ARG3,28,18,0.888889,0.571429
+noun_ARG1,2848,2854,0.941135,0.943118
+noun_ARG2,33,25,0.680000,0.515152
+poss_ARG1,251,257,0.945525,0.968127
+poss_ARG2,265,265,0.988679,0.988679
+prep_ARG1,2679,2892,0.780083,0.842105
+prep_ARG2,2716,2844,0.899789,0.942194
+prep_ARG3,11,0,NaN,0.000000
+punct_ARG1,1856,1939,0.742135,0.775323
+quote_ARG1,1,0,NaN,0.000000
+quote_ARG2,4,3,0.000000,0.000000
+quote_ARG3,4,1,0.000000,0.000000
+relative_ARG1,190,180,0.838889,0.794737
+relative_ARG2,7,7,0.714286,0.714286
+verb_ARG1,2959,2938,0.872703,0.866509
+verb_ARG2,2946,3000,0.853333,0.868975
+verb_ARG3,215,131,0.786260,0.479070
+verb_ARG4,3,0,NaN,0.000000
+verb_MOD,56,32,0.656250,0.375000
+
+### Breakdown by edge length
+
+Edge length,Number of edges in gold standard,Number of edges in system output,Precision,Recall
+1,14112,14530,0.923125,0.950468
+2,6323,6469,0.895656,0.916337
+3,3164,3188,0.851945,0.858407
+4,1597,1529,0.779595,0.746399
+5-9,2563,2295,0.691503,0.619196
+10-,1339,1234,0.627229,0.578043
+
+### Unlabeled scores
+
+UP: 0.885998
+UR: 0.890474
+UF: 0.888230
+UM: 0.181751

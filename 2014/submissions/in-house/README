@@ -1,0 +1,36 @@
+1. Team Identifier: SDP
+
+2. Team Member Name(s) and Affiliation(s):
+
+  Yusuke Miyao, National Institute of Informatics
+  Stephan Oepen, University of Oslo
+  Daniel Zeman, Charles University in Prague
+
+3. Designated Contact Person and Email Address
+
+  Stephan Oepen <oe@ifi.uio.no>
+
+4. Inventory of Results Files Included in the Archive:
+
+  open.dm.1.sdp
+  open.pas.1.sdp
+  open.pcedt.1.sdp
+
+5. System Characteristics, Including (If Applicable):
+
+  core approach: ‘full’ grammatical analysis, using pre-existing parsers;
+  important features: none;
+  critical tools used: ERG + PET (DM), Enju (PAS), Treex/MST Parser (PCEDT)
+  data pre- or post-processing: SDP-style conversion of parser outputs;
+  additional data used: yes.
+
+6. Bibliographic References (If Applicable):
+
+  Treex:
+    Martin Popel, Zdeněk Žabokrtský: TectoMT: Modular NLP Framework. 
+      In Proceedings of IceTAL, 7th International Conference on Natural 
+      Language Processing, Reykjavík, Iceland, August 17, 2010, pp. 293–304.
+  MST Parser (used within Treex):
+    Ryan McDonald, Fernando Pereira, Kiril Ribarov, Jan Hajič: 
+      Non-projective Dependency Parsing using Spanning Tree Algorithms. 
+      In Proceedings of HLT/EMNLP 2005.

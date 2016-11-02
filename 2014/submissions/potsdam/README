@@ -1,0 +1,64 @@
+*** Team identifier
+	
+UniPotsdam
+
+*** Team member names and affiliations:
+	
+Zeljko Agic, Alexander Koller
+Linguistics Department, University of Potsdam, Germany
+
+*** Designated contact person and email address:
+	
+Zeljko Agic, zagic@uni-potsdam.de
+
+*** Inventory of results files included in the archive:
+
+The archive contains 12 results files in the form "T.F.M.sdp".
+
+T(rack) = closed, open
+F(ormalism) = dm, pas, pcedt
+M(ethod) = 1, 2
+
+*** System characteristics
+
+*** Core approach
+
+Our system extends the official SDP baseline by performing less lossy graph->tree 
+conversions. As in the baseline, in our system, the training set dependency graphs are 
+converted to dependency trees, syntactic dependency parsing models are trained on this 
+data and used on the development and test data. The parser outputs are finally converted 
+back from dependency trees to SDP graphs. We estimate the top nodes using CRF-based 
+sequence labeling with models trained on the SDP training data.
+
+We implement two different approaches to graph->tree conversion loss minimization.
+
+M = 1: Graph->tree conversion using conservative edge flipping for node re-entrancies
+M = 2: Depth-first search graph->tree conversion
+
+In both approaches, the edge flipping is encoded in the edge labels, thus enabling 
+deterministic re-flipping for tree->graph conversion after parsing.
+
+*** Critical tools used
+
+1 ... mate-tools graph-based parser (Bohnet, 2010)
+2 ... CRF++ sequence labeling tool (Kudo, 2005)
+3 ... JGraphT library (Naveh, 2008)
+4 ... in-house tools for performing graph->tree and tree->graph conversions
+
+*** Data pre- or post-processing
+
+As implied above, we perform lossy SDP-to-CoNLL conversion in pre-processing, and lossless 
+ConLL-to-SDP conversion and CRF-based top node detection in post-processing.
+
+*** Additional data used
+
+We use the the syntactic features -- head-dependency pairs and bracketings -- from the 
+companion data for the open track as an additional information source for the parser. 
+Other than the companion data, we use no additional helper data.
+
+*** Bibliographic references
+
+Bernd Bohnet. 2010. Top Accuracy and Fast Dependency Parsing is not a Contradiction. In 
+Proc. COLING, pp. 89--97.
+Taku Kudo. 2005. CRF++: Yet Another CRF Toolkit. Available at http://crfpp.googlecode.com/.
+Barak Naveh. 2008. JGraphT. Available at http://jgrapht.org/.
