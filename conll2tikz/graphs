@@ -1,0 +1,50 @@
+#20038006
+1	Bramalea	_generic_proper_ne_	NNP	-	-	named:x-c	ARG1	_	_	_	_	_	_	_
+2	said	say	VBD	+	+	v_to:e-i-h-i	_	_	_	_	_	_	_	_
+3	it	it	PRP	-	-	pron:x	_	ARG1	ARG1	_	_	_	_	_
+4	expects	expect	VBZ	-	+	v:e-i-h	ARG2	_	_	_	_	_	_	_
+5	to	to	TO	-	-	_	_	_	_	_	_	_	_	_
+6	complete	complete	VB	-	+	v:e-i-p	_	ARG2	_	_	ARG1	_	_	_
+7	the	the	DT	-	+	q:i-h-h	_	_	_	_	_	_	_	_
+8	issue	issue	NN	-	-	n:x	_	_	ARG2	BV	_	_	_	_
+9	by	by	IN	-	+	p:e-u-i	_	_	_	_	_	_	_	_
+10	the	the	DT	-	+	q:i-h-h	_	_	_	_	_	_	_	_
+11	end	end	NN	-	+	n_of:x-i	_	_	_	_	ARG2	BV	_	_
+12	of	of	IN	-	-	_	_	_	_	_	_	_	_	_
+13	the	the	DT	-	+	q:i-h-h	_	_	_	_	_	_	_	_
+14	month	month	NN	-	-	n:x	_	_	_	_	_	_	ARG1	BV
+15	.	_	.	-	-	_	_	_	_	_	_	_	_	_
+
+#20038006
+1	Bramalea	bramalea	NNP	-	-	_	verb_ARG1	_	_	_	_	_	_	_	_
+2	said	say	VBD	+	+	_	_	_	_	_	_	_	_	_	_
+3	it	it	PRP	-	-	_	_	verb_ARG1	_	verb_ARG1	_	_	_	_	_
+4	expects	expect	VBZ	-	+	_	verb_ARG2	_	_	_	_	_	_	_	_
+5	to	to	TO	-	+	_	_	_	_	_	_	_	_	_	_
+6	complete	complete	VB	-	+	_	_	verb_ARG2	comp_ARG1	_	_	prep_ARG1	_	_	_
+7	the	the	DT	-	+	_	_	_	_	_	_	_	_	_	_
+8	issue	issue	NN	-	-	_	_	_	_	verb_ARG2	det_ARG1	_	_	_	_
+9	by	by	IN	-	+	_	_	_	_	_	_	_	_	_	_
+10	the	the	DT	-	+	_	_	_	_	_	_	_	_	_	_
+11	end	end	NN	-	-	_	_	_	_	_	_	prep_ARG2	det_ARG1	prep_ARG1	_
+12	of	of	IN	-	+	_	_	_	_	_	_	_	_	_	_
+13	the	the	DT	-	+	_	_	_	_	_	_	_	_	_	_
+14	month	month	NN	-	-	_	_	_	_	_	_	_	_	prep_ARG2	det_ARG1
+15	.	_	.	-	-	_	_	_	_	_	_	_	_	_	_
+
+#20038006
+1	Bramalea	bramalea	NNP	-	-	_	ACT-arg	_	_	_
+2	said	say	VBD	+	+	ev-w2833f1	_	_	_	_
+3	it	#PersPron_#Cor	PRP	-	-	_	_	ACT-arg	ACT-arg	_
+4	expects	expect	VBZ	-	+	ev-w1239f1	EFF-arg	_	_	_
+5	to	to	TO	-	-	_	_	_	_	_
+6	complete	complete	VB	-	+	ev-w620f1	_	PAT-arg	_	_
+7	the	the	DT	-	-	_	_	_	_	_
+8	issue	issue	NN	-	-	_	_	_	PAT-arg	_
+9	by	by	IN	-	-	_	_	_	_	_
+10	the	the	DT	-	-	_	_	_	_	_
+11	end	end	NN	-	+	_	_	_	TWHEN	_
+12	of	of	IN	-	-	_	_	_	_	_
+13	the	the	DT	-	-	_	_	_	_	_
+14	month	month	NN	-	-	_	_	_	_	APP
+15	.	.	.	-	-	_	_	_	_	_

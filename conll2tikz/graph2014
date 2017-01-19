@@ -1,0 +1,16 @@
+#20038006
+1	Bramalea	bramalea	NNP	-	-	ACT	_	_	_
+2	said	say	VBD	+	+	_	_	_	_
+3	it	#PersPron	PRP	-	-	_	ACT	_	_
+4	expects	expect	VBZ	-	+	EFF	_	_	_
+5	to	to	TO	-	-	_	_	_	_
+6	complete	complete	VB	-	+	_	PAT	_	_
+7	the	the	DT	-	-	_	_	_	_
+8	issue	issue	NN	-	-	_	_	PAT	_
+9	by	by	IN	-	-	_	_	_	_
+10	the	the	DT	-	-	_	_	_	_
+11	end	end	NN	-	+	_	_	TWHEN	_
+12	of	of	IN	-	-	_	_	_	_
+13	the	the	DT	-	-	_	_	_	_
+14	month	month	NN	-	-	_	_	_	APP
+15	.	.	.	-	-	_	_	_	_
