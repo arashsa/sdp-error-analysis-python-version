@@ -195,9 +195,19 @@ def dependencies_by_sentence_length(gold, pred):
                 
 
 def sentence_lengths(gold):
+    """
+    Returns sentence length, and average length
+    """
     dependencies = [[] for a in range(56)]
     for length in range(56):
         for a in gold:
             if len(a[1]) == length:
                 dependencies[length].append(a)
-    return [len(a) for a in dependencies]
+    sentences = [len(a) for a in dependencies]
+    count = 0
+    s = 0
+    for a in gold:
+        s += len(a[1])
+        count += 1
+    average = s / count
+    return (sentences, average)

@@ -2,6 +2,10 @@ from functions import create_graph_conll, full_analysis, get_args, get_pos, get_
 
 class Data:
     def __init__(self):
+        # training data
+        self.dm_training = create_graph_conll(open('2015/en.dm.sdp'))
+        self.psd_training = create_graph_conll(open('2015/en.psd.sdp'))
+
         # test data
         self.dm = create_graph_conll(open('2015/test/en.id.dm.sdp'))
         self.dm_ood = create_graph_conll(open('2015/test/en.ood.dm.sdp'))
