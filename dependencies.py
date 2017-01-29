@@ -176,22 +176,46 @@ def dependencies_by_length(gold, test, arg=False):
     return((return_length, return_gold, return_pred, return_match, return_p, return_r, return_f))
 
 
-def dependencies_by_sentence_length(gold, pred):
-    '''
-    Dependencies by the length of each sentence
-    '''
+def dependencies_by_sentence_length(gold, test):
+    """
+    Precision, recall, F-score for dependencies by length
+    """
 
-    dependencies = [[] for a in range(56)]
-    for length in range(56):
-        for a, b in zip(gold, pred):
+    results = []
+    for length in range(1, 51):
+        found = 0
+        gold_size = 0
+        test_size = 0
+        size = 0
+        
+        for a, b in zip(gold, test):
+
             # graphs
             _gold = a[0].edges(data='label')
             _test = b[0].edges(data='label')
+            sentence_length = len(a[1])
 
-            if len(a[1]) == length:
-                dependencies[length].append(a)
+            # sentence length match
+            if (sentence_length == length):
+                size += 1
+                gold_size += len(_gold)
+                test_size += len(_test)
+                for edge in _test:
+                    if edge in _gold:
+                        found += 1
+                        
+        p = 0 if test_size == 0 else found / test_size
+        r = 0 if gold_size == 0 else found / gold_size
+        if found > 0:
+            f = 2 * ((p * r) / (p + r))
+        else:
+            f = 0
+        results.append([p, r, f])
 
-    return dependencies
+    return results
+
+
+
                 
 
 def sentence_lengths(gold):
