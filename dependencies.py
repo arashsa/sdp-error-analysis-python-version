@@ -186,7 +186,6 @@ def dependencies_by_sentence_length(gold, test):
         found = 0
         gold_size = 0
         test_size = 0
-        size = 0
         
         for a, b in zip(gold, test):
 
@@ -197,7 +196,6 @@ def dependencies_by_sentence_length(gold, test):
 
             # sentence length match
             if (sentence_length == length):
-                size += 1
                 gold_size += len(_gold)
                 test_size += len(_test)
                 for edge in _test:
