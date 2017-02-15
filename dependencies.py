@@ -158,9 +158,9 @@ def dependencies_by_length(gold, test, arg=False):
                       format(length-1, arg, gold_size, test_size, found, p, r, f))
             else:
                 print('{:<8} &{:<10} &{:<10} &{:<10} &{:<10.4f} &{:<10.4f} &{:<10.4f}\\\\'.
-                      format(length-1, gold_size, test_size, found, p, r, f))
+                      format(length, gold_size, test_size, found, p, r, f))
 
-        return_length.append(length-1)
+        return_length.append(length)
         return_gold.append(gold_size)
         return_pred.append(test_size)
         return_match.append(found)
