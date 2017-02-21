@@ -182,10 +182,12 @@ def dependencies_by_sentence_length(gold, test):
     """
 
     results = []
-    for length in range(1, 51):
-        found = 0
-        gold_size = 0
-        test_size = 0
+    found = 0
+    gold_size = 0
+    test_size = 0
+
+    # len(range(1, 51)) == 50
+    for length in range(1, 60):
         
         for a, b in zip(gold, test):
 
@@ -201,14 +203,19 @@ def dependencies_by_sentence_length(gold, test):
                 for edge in _test:
                     if edge in _gold:
                         found += 1
-                        
-        p = 0 if test_size == 0 else found / test_size
-        r = 0 if gold_size == 0 else found / gold_size
-        if found > 0:
-            f = 2 * ((p * r) / (p + r))
-        else:
-            f = 0
-        results.append([p, r, f])
+
+        if length % 10 == 0:         
+            p = 0 if test_size == 0 else found / test_size
+            r = 0 if gold_size == 0 else found / gold_size
+            if found > 0:
+                f = 2 * ((p * r) / (p + r))
+            else:
+                f = 0
+            results.append([p, r, f])
+
+            found = 0
+            gold_size = 0
+            test_size = 0
 
     return results
 
