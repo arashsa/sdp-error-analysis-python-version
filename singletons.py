@@ -91,7 +91,7 @@ def singletons_pos_frame(gold, test, pos=False, frame=False, sort=False):
                     
             gold_node_pos_frame = []
             
-            # finding dangling nodes
+            # finding singletons
             for k, v in _gold_data.items():
                 if k not in _gold_visited and v[pos_frame] == current:
                     gold_size += 1

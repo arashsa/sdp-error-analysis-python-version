@@ -85,6 +85,7 @@ def predicate_argument_pos(gold, test, pos_frame, pos_frame_type, predicate_argu
             print('{:<20} &{:<10} &{:<10} &{:<10.4f} &{:<10.4f} &{:<10.4f}\\\\'
                   .format(s[0].replace('_', '\_'), s[1], s[2], s[3], s[4], s[5]))
     print()
+    return saved
 
 
 def frame_pos(gold, test, pos_frame, pos_frame_type, sort=0):
